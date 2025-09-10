@@ -1,0 +1,12 @@
+@use '../../../styles/variables' as *;
+
+.page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.main {
+  padding-top: 120px; // Отступ для фиксированного header
+}
+

@@ -1,0 +1,80 @@
+@use '../../../styles/variables' as *;
+
+.section {
+  padding: var(--spacing-4xl) 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  max-width: 483px;
+}
+
+.title {
+  font-family: var(--font-family-primary);
+  font-weight: 700;
+  font-size: var(--text-3xl);
+  line-height: 1.171875em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.description {
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  font-size: var(--text-xl);
+  line-height: 1.2em;
+  letter-spacing: 1%;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.doctorsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(321px, 1fr));
+  align-items: start;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+.doctorItem,
+.doctorItemActive {
+  align-self: start;
+}
+
+.doctorItemActive {
+  grid-column: span 1;
+}
+
+.fullListLink {
+  font-family: var(--font-family-primary);
+  font-weight: 500;
+  font-size: var(--text-xl);
+  line-height: 1.2em;
+  color: var(--text-primary);
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: center;
+  transition: font-weight 0.3s ease;
+  
+  &:hover {
+    font-weight: 700;
+  }
+}

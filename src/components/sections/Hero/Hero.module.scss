@@ -1,0 +1,107 @@
+@use '../../../styles/variables' as *;
+
+.hero {
+  position: relative;
+  min-height: 417px; // Height from Figma design
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 40px 0; // Figma padding
+}
+
+.backgroundImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/hero-background-new.jpg') center/cover no-repeat;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1130px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  
+  @include mobile {
+    padding: 0 24px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; // Figma gap
+  max-width: 1360px; // Match Figma card width
+  margin: 0 auto;
+  background: var(--card-background); // Same as specialtiesCard
+  border-radius: 60px; // Figma border radius
+  padding: 24px; // Match card inner padding
+  box-shadow: var(--shadow-sm), var(--shadow-lg); // Same as specialtiesCard
+  backdrop-filter: blur(24px); // Same as specialtiesCard
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; // Figma gap
+    padding: 40px; // Figma padding
+
+  @include mobile {
+    gap: 20px;
+    padding: 24px;
+  }
+}
+
+.title {
+  font-family: var(--font-family-primary);
+  font-weight: 700;
+  font-size: 80px; // Figma H1 size
+  line-height: 1.2em;
+  color: var(--text-primary);
+  margin: 0;
+  
+  @include mobile {
+    font-size: var(--text-4xl);
+  }
+}
+
+.description {
+  font-family: var(--font-family-primary);
+  font-weight: 500;
+  font-size: 24px; // Figma text (H1) size
+  line-height: 1.2em;
+  color: var(--text-primary);
+  margin: 0;
+  max-width: 590px;
+  
+  @include mobile {
+    font-size: var(--text-xl);
+  }
+}
+
+.searchContainer {
+  max-width: 345px; // Figma width
+  width: 100%;
+  align-self: flex-end; // Figma positioning
+  
+  @include mobile {
+    align-self: stretch;
+    max-width: none;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px; // Figma gap
+  flex-wrap: wrap;
+  margin-top: 24px;
+  
+  @include mobile {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

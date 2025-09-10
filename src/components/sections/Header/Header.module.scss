@@ -1,0 +1,36 @@
+@use '../../../styles/variables' as *;
+
+.header {
+  position: relative;
+  padding: var(--spacing-3xl) 0;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  
+  @include mobile {
+    display: none;
+  }
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}

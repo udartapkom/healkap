@@ -1,0 +1,2 @@
+export { PopularSpecialties } from './PopularSpecialties';
+

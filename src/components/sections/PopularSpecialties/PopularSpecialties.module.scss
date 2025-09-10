@@ -1,0 +1,83 @@
+@use '../../../styles/variables' as *;
+
+.section {
+  padding: var(--spacing-4xl) 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.title {
+  font-family: var(--font-family-primary);
+  font-weight: 700;
+  font-size: var(--text-3xl);
+  line-height: 1.171875em;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.specialtiesCard {
+  @include card-base;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-xl);
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.specialtiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: var(--spacing-xl);
+  height: 156px;
+  overflow: hidden;
+  
+  @include mobile {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-lg);
+    height: auto;
+  }
+}
+
+.specialtyItem {
+  font-family: var(--font-family-primary);
+  font-weight: 500;
+  font-size: var(--text-xl);
+  line-height: 1.2em;
+  color: var(--text-primary);
+  padding: var(--spacing-sm) 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  
+  &:hover {
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.fullListLink {
+  font-family: var(--font-family-primary);
+  font-weight: 500;
+  font-size: var(--text-xl);
+  line-height: 1.2em;
+  color: var(--text-primary);
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: center;
+  transition: font-weight 0.3s ease;
+  
+  &:hover {
+    font-weight: 700;
+  }
+}
