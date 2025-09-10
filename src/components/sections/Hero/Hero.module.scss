@@ -7,6 +7,7 @@
   align-items: center;
   overflow: hidden;
   padding: 40px 0; // Figma padding
+  padding-bottom: 0;
 }
 
 .backgroundImage {
@@ -47,8 +48,6 @@
   display: flex;
   flex-direction: column;
   gap: 24px; // Figma gap
-    padding: 40px; // Figma padding
-
   @include mobile {
     gap: 20px;
     padding: 24px;
