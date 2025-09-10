@@ -2,12 +2,13 @@
 
 import React from 'react';
 import { Button, Input } from '../../UiKit';
+import asset from '../../../utils/asset';
 import styles from './Hero.module.scss';
 
 export const Hero: React.FC = () => {
   return (
     <section className={styles.hero}>
-      <div className={styles.backgroundImage} />
+      <div className={styles.backgroundImage} style={{ backgroundImage: `url(${asset('/images/hero-background-new.jpg')})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} />
       
       <div className={styles.container}>
         <div className={styles.content}>
@@ -26,7 +27,7 @@ export const Hero: React.FC = () => {
           <div className={styles.searchContainer}>
             <Input
               placeholder="Поиск врача"
-              leftIcon={<img src="/images/search-icon.svg" alt="Search" width={15} height={15} />}
+              leftIcon={<img src={asset('/images/search-icon.svg')} alt="Search" width={15} height={15} />}
               fullWidth
             />
           </div>

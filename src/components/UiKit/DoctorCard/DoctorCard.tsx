@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './DoctorCard.module.scss';
 import { Button } from '../Button';
+import asset from '../../../utils/asset';
 
 export interface DoctorCardProps {
   name: string;
@@ -62,7 +63,7 @@ export const DoctorCard: React.FC<DoctorCardProps> = ({
         <>
           <div className={styles.photo}>
             {photo ? (
-              <img src={photo} alt={name} />
+              <img src={photo.startsWith('/') ? asset(photo) : photo} alt={name} />
             ) : (
               <div className={styles.photoPlaceholder} />
             )}
@@ -86,7 +87,7 @@ export const DoctorCard: React.FC<DoctorCardProps> = ({
               <div className={styles.photoAndRating}>
                 <div className={styles.photo}>
                   {photo ? (
-                    <img src={photo} alt={name} />
+                    <img src={photo.startsWith('/') ? asset(photo) : photo} alt={name} />
                   ) : (
                     <div className={styles.photoPlaceholder} />
                   )}

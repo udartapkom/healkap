@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './Logo.module.scss';
+import asset from '../../../utils/asset';
 
 export interface LogoProps {
   variant?: 'default' | 'active';
@@ -22,7 +23,7 @@ export const Logo: React.FC<LogoProps> = ({
     )}>
       <img
         className={styles.image}
-        src="/images/logo-icon-5e50ad.png"
+        src={asset('/images/logo-icon-5e50ad.png')}
         alt="HealKap"
         draggable={false}
       />

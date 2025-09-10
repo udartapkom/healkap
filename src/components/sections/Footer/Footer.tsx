@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import asset from '../../../utils/asset';
 import { Logo } from '../../UiKit';
 import styles from './Footer.module.scss';
 
@@ -48,13 +49,13 @@ export const Footer: React.FC = () => {
           
           <div className={styles.social}>
             <a href="#" className={styles.socialLink} aria-label="VK">
-              <img src="/images/vk-icon-with-bg.svg" alt="VK" width={40} height={40} />
+              <img src={asset('/images/vk-icon-with-bg.svg')} alt="VK" width={40} height={40} />
             </a>
             <a href="#" className={styles.socialLink} aria-label="Telegram">
-              <img src="/images/telegram-icon-with-bg.svg" alt="Telegram" width={40} height={40} />
+              <img src={asset('/images/telegram-icon-with-bg.svg')} alt="Telegram" width={40} height={40} />
             </a>
             <a href="#" className={styles.socialLink} aria-label="Instagram">
-              <img src="/images/instagram-icon-with-bg.svg" alt="Instagram" width={40} height={40} />
+              <img src={asset('/images/instagram-icon-with-bg.svg')} alt="Instagram" width={40} height={40} />
             </a>
           </div>
         </div>

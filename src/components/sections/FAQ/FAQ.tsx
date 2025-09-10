@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import asset from '../../../utils/asset';
 import styles from './FAQ.module.scss';
 
 const faqItems = [
@@ -47,9 +48,9 @@ export const FAQ: React.FC = () => {
                   <h3 className={styles.question}>{item.question}</h3>
                   <div className={styles.icon}>
                     {activeIndex === index ? (
-                      <img src="/images/minus-icon.svg" alt="Minus" width={20} height={20} />
+                      <img src={asset('/images/minus-icon.svg')} alt="Minus" width={20} height={20} />
                     ) : (
-                      <img src="/images/plus-icon.svg" alt="Plus" width={20} height={20} />
+                      <img src={asset('/images/plus-icon.svg')} alt="Plus" width={20} height={20} />
                     )}
                   </div>
                 </div>
