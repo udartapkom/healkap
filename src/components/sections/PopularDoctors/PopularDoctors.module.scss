@@ -8,9 +8,7 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
   
   @include mobile {
     padding: 0;
@@ -51,7 +49,7 @@
   gap: var(--spacing-xl);
   margin-bottom: var(--spacing-xl);
   
-  @include mobile {
+  @include tablet {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
   }
@@ -60,6 +58,9 @@
 .doctorItem,
 .doctorItemActive {
   align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .doctorItemActive {
