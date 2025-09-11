@@ -9,49 +9,49 @@ const doctors = [
     name: 'Мария Сергеевна Орлова',
     speciality: 'Терапевт, к.м.н.',
     rating: 5,
-    photo: '/images/doctor-1.jpg',
+    photo: '/images/doctor.jpg',
   },
   {
     name: 'Александр Петрович Смирнов',
     speciality: 'Кардиолог, д.м.н.',
     rating: 5,
-    photo: '/images/doctor-2.jpg',
+    photo: '/images/doctor.jpg',
   },
   {
     name: 'Елена Владимировна Козлова',
     speciality: 'Невролог, к.м.н.',
     rating: 5,
-    photo: '/images/doctor-3.jpg',
+    photo: '/images/doctor.jpg'
   },
   {
     name: 'Дмитрий Игоревич Волков',
     speciality: 'Хирург, к.м.н.',
     rating: 5,
-    photo: '/images/doctor-placeholder.jpg',
+    photo: '/images/doctor.jpg',
   },
   {
     name: 'Анна Михайловна Лебедева',
     speciality: 'Гинеколог, к.м.н.',
     rating: 5,
-    photo: '/images/doctor-placeholder.jpg',
+    photo: '/images/doctor.jpg',
   },
   {
     name: 'Сергей Александрович Морозов',
     speciality: 'Офтальмолог, к.м.н.',
     rating: 5,
-    photo: '/images/doctor-placeholder.jpg',
+    photo: '/images/doctor.jpg',
   },
   {
     name: 'Ольга Сергеевна Новикова',
     speciality: 'Педиатр, к.м.н.',
     rating: 5,
-    photo: '/images/doctor-placeholder.jpg',
+    photo: '/images/doctor.jpg',
   },
   {
     name: 'Игорь Владимирович Соколов',
     speciality: 'Уролог, к.м.н.',
     rating: 5,
-    photo: '/images/doctor-placeholder.jpg',
+    photo: '/images/doctor.jpg',
   },
 ];
 

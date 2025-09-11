@@ -8,5 +8,11 @@
 
 .main {
   padding-top: 96px; // Отступ для фиксированного header
+  @include mobile {
+    padding-top: 0; 
+  }
+  @include tablet {
+    padding-top: 12px; 
+  }
 }
 

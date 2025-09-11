@@ -23,7 +23,7 @@ export const Logo: React.FC<LogoProps> = ({
     )}>
       <img
         className={styles.image}
-        src={asset('/images/logo-icon-5e50ad.png')}
+        src={asset('/images/union.svg')}
         alt="HealKap"
         draggable={false}
       />

@@ -15,7 +15,11 @@
   padding: 0;
   
   @include mobile {
-    padding: 0;
+    padding: 0 12px;
+  }
+
+  @include tablet {
+    padding: 0 12px;
   }
 }
 
@@ -27,10 +31,125 @@
   @include mobile {
     display: none;
   }
+  
+  @include tablet {
+    display: none;
+  }
 }
 
 .auth {
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
+
+}
+
+// Hide login button on tablet only
+.loginButton {
+  @include tablet { display: none; }
+  @include mobile { display: none; }
+}
+
+// Burger button visible on tablet and mobile
+.burger {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--card-background);
+  box-shadow: var(--shadow-sm), var(--shadow-lg);
+  backdrop-filter: blur(24px);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 12px;
+  @include transition(all);
+
+  @include tablet { display: inline-flex; align-items: center; justify-content: center; }
+  @include mobile { display: inline-flex; align-items: center; justify-content: center; }
+}
+
+.burgerLine {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-primary);
+  margin: 2px 0;
+  border-radius: 2px;
+}
+
+// Overlay behind drawer
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 90;
+}
+
+// Right-side drawer
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(60vw, 660px);
+  transform: translateX(100%);
+  background: var(--card-background);
+  box-shadow: var(--shadow-sm), var(--shadow-lg);
+  backdrop-filter: blur(24px) saturate(180%);
+  transition: transform 0.3s ease;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-2xl);
+  
+  @include desktop { display: none; }
+}
+
+.drawerOpen { transform: translateX(0); }
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.close {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--card-background);
+  box-shadow: var(--shadow-sm), var(--shadow-lg);
+  border: none;
+  cursor: pointer;
+}
+
+.close span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+}
+
+.close span:first-child { transform: translate(-50%, -50%) rotate(45deg); }
+.close span:last-child { transform: translate(-50%, -50%) rotate(-45deg); }
+
+.drawerNav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; // left-aligned items
+  gap: var(--spacing-md);
+}
+
+.drawerAuth {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-start;
 }

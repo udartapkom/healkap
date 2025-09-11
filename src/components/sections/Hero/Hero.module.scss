@@ -8,6 +8,12 @@
   overflow: hidden;
   padding: 40px 0; // Figma padding
   padding-bottom: 0;
+  @include mobile {
+    padding-top: 0;
+  }
+  @include tablet {
+    padding-top: 8;
+  }
 }
 
 .backgroundImage {
@@ -37,11 +43,14 @@
   gap: 40px; // Figma gap
   max-width: 1360px; // Match Figma card width
   margin: 0 auto;
-  background: var(--card-background); // Same as specialtiesCard
+  background: var(--card-background);
   border-radius: 60px; // Figma border radius
   padding: 24px; // Match card inner padding
-  box-shadow: var(--shadow-sm), var(--shadow-lg); // Same as specialtiesCard
-  backdrop-filter: blur(24px); // Same as specialtiesCard
+  // box-shadow: var(--shadow-sm), var(--shadow-lg); 
+  backdrop-filter: blur(6px) saturate(180%); 
+  box-shadow: 0 8px 32px rgba(31, 38, 135, .2), 
+    inset 2px 2.5px 1px -2px #fff, 
+    inset 0 4px 12px rgba(255, 255, 255, .3);
 }
 
 .textContent {

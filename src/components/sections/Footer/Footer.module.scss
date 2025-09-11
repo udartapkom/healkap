@@ -26,7 +26,13 @@
   flex-direction: column;
   justify-content: space-between;
   gap: var(--spacing-md);
-  height: 213px;
+  height: 212px;
+  @include tablet {
+    height: 120px;
+  }
+  @include mobile {
+    height: 82px;
+  }
 }
 
 .copyright {
